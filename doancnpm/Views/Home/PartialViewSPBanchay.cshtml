@@ -1,0 +1,21 @@
+﻿@model IEnumerable<doancnpm.Models.SANPHAM>
+@foreach (var sp in Model)
+{
+    <div class="product-go">
+        <div class=" fashion-grid">
+            <a href="@Url.Action("Single","Home",new { id = sp.MASP})"><img class="img-responsive " src=~/Content/Images/hinhsanpham/@sp.HINHANH alt=""></a>
+
+        </div>
+        <div class=" fashion-grid1">
+            <h6 class="best2">
+                <a href="@Url.Action("Single","Home",new { id = sp.MASP})">
+                    @sp.TENSP
+                </a>
+            </h6>
+
+            <span class=" price-in1">@sp.GIABAN VNĐ</span>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+}
+

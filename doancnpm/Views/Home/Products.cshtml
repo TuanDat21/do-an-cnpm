@@ -1,0 +1,188 @@
+﻿@model PagedList.PagedList<doancnpm.Models.SANPHAM>
+@using PagedList.Mvc;
+
+@helper Truncate(string input, int length)
+{
+    if (input.Length < length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <!--content-->
+    <!---->
+    <div class="product">
+        <div class="container">
+            <div class="col-md-3 product-price">
+
+                <div class=" rsidebar span_1_of_left">
+                    <div class="of-left">
+                        <h3 class="cate">Danh mục</h3>
+                    </div>
+                    <ul class="menu">
+                        <li class="item1">
+                            <a href="#">Áo </a>
+                            <ul class="cute">
+                                <li class="subitem1"><a href="single.html">Áo thun </a></li>
+                                <li class="subitem2"><a href="single.html">Áo khoác </a></li>
+                                <li class="subitem3"><a href="single.html">Áo sơmi </a></li>
+                            </ul>
+                        </li>
+                        <li class="item2">
+                            <a href="#">Quần </a>
+                            <ul class="cute">
+                                <li class="subitem1"><a href="single.html">Quần jean</a></li>
+                                <li class="subitem2"><a href="single.html">Quần short </a></li>
+                                <li class="subitem3"><a href="single.html">Quần kaki </a></li>
+                            </ul>
+                        </li>
+                        <li class="item3">
+                            <a href="#">Ba-lô</a>
+                            <ul class="cute">
+                                <li class="subitem1"><a href="single.html">Túi xách </a></li>
+                                <li class="subitem2"><a href="single.html">Balo thể thao </a></li>
+                                <li class="subitem3"><a href="single.html">Cặp xách</a></li>
+                            </ul>
+                        </li>
+                        <li class="item4">
+                            <a href="#">Giày</a>
+                            <ul class="cute">
+                                <li class="subitem1"><a href="single.html">Sneaker </a></li>
+                                <li class="subitem2"><a href="single.html">Giày cao gót </a></li>
+                                <li class="subitem3"><a href="single.html">Dép</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="item4">
+                            <a href="#">Phụ kiện</a>
+                            <ul class="cute">
+                                <li class="subitem1"><a href="product.html">Phụ kiện nam </a></li>
+                                <li class="subitem2"><a href="product.html">Phụ kiện nữ </a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--initiate accordion-->
+                <script type="text/javascript">
+                    $(function () {
+                        var menu_ul = $('.menu > li > ul'),
+                               menu_a = $('.menu > li > a');
+                        menu_ul.hide();
+                        menu_a.click(function (e) {
+                            e.preventDefault();
+                            if (!$(this).hasClass('active')) {
+                                menu_a.removeClass('active');
+                                menu_ul.filter(':visible').slideUp('normal');
+                                $(this).addClass('active').next().stop(true, true).slideDown('normal');
+                            } else {
+                                $(this).removeClass('active');
+                                $(this).next().stop(true, true).slideUp('normal');
+                            }
+                        });
+
+                    });
+                </script>
+                <!---->
+                <div class="product-middle">
+
+                    <div class="fit-top">
+                        <h6 class="shop-top">AN STORE</h6>
+                        <a href="single.html" class="shop-now">XEM NGAY</a>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="sellers">
+                    <div class="of-left-in">
+                        <h3 class="tag">Tags</h3>
+                    </div>
+                    <div class="tags">
+                        <ul>
+                            <li><a href="#">design</a></li>
+                            <li><a href="#">fashion</a></li>
+                            <li><a href="#">lorem</a></li>
+                            <li><a href="#">dress</a></li>
+                            <li><a href="#">fashion</a></li>
+                            <li><a href="#">dress</a></li>
+                            <li><a href="#">design</a></li>
+                            <li><a href="#">dress</a></li>
+                            <li><a href="#">design</a></li>
+                            <li><a href="#">fashion</a></li>
+                            <li><a href="#">lorem</a></li>
+                            <li><a href="#">dress</a></li>
+
+                            <div class="clearfix"> </div>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <!---->
+                <div class="product-bottom">
+                    <div class="of-left-in">
+                        <h3 class="best">Bán chạy</h3>
+                    </div>
+                    @Html.Action("PartialViewSPBanchay")
+
+                </div>
+
+                <div class=" per1">
+                    <a href="single.html">
+                        <img class="img-responsive" src="~/Content/Images/pro.jpg" alt="">
+                        <div class="six1">
+                            <h4>GIẢM GIÁ</h4>
+                            <p>LÊN ĐẾN</p>
+                            <span>60%</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-9 product1">
+                <div class=" bottom-product">
+                    @foreach (var sp in Model)
+                    {
+                        <div class="col-md-4 bottom-cd simpleCart_shelfItem">
+                            <div class="product-at ">
+                                <a href="@Url.Action("Single","Home",new { id = sp.MASP})">
+                                    <img class="img-responsive" src="~/Content/Images/hinhsanpham/@sp.HINHANH" alt="">
+                                    <div class="pro-grid">
+                                        <span class="buy-in">MUA NGAY</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <p class="tun">@Truncate(sp.TENSP, 30)</p>
+                            <a href="#" class="item_add"><p class="number item_price"><i> </i>@sp.GIABAN VNĐ</p></a>
+                        </div>
+                    }
+                    <div class="clearfix"> </div>
+                </div>                              
+                <nav class="in">
+                    <ul class="pagination">
+                        <div class="menutrang">
+                            @Html.PagedListPager(Model, page => Url.Action("Products", new { page = page }))
+                        </div>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="clearfix"> </div>
+            
+
+
+
+            
+        </div>
+
+</div>
+
+</body>
+</html>

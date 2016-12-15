@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!--content-->
+
+
+    @using (Html.BeginForm())
+    {
+    <div class="container">
+        <div class="account">
+            <h1>Tài Khoản</h1>
+            <div class="account-pass">
+                <div class="col-md-8 account-top">
+                    <form>
+
+                        <div>
+                            <span>Tên đăng nhập</span>
+                            <input name="text" type="text">
+                        </div>
+                        <div>
+                            <span>Mật khẩu</span>
+                            <input name="password" type="password">
+                        </div>
+                        <input type="submit" value="Đăng nhập">
+                    </form>
+                </div>
+                <div class="col-md-4 left-account ">
+                    <a href="Blog"><img class="img-responsive " src="~/Content/Images/s1.jpg" alt=""></a>
+                    <div class="five">
+                        <h2>25%</h2>
+                        <span>Giảm giá ngay</span>
+                    </div>
+                    <a href="Register" class="create">Tạo tài khoản</a>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+
+    </div>
+    }
+
+
+</body>
+</html>

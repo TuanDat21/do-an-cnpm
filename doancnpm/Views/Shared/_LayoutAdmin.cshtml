@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/CssAdmin/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="~/Content/CssAdmin/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="~/Content/CssAdmin/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="~/Content/CssAdmin/icon-font.min.css" type='text/css' />
+    <!-- //lined-icons -->
+    <!-- chart -->
+    <script src="~/Scripts/JqueryAdmin/Chart.js"></script>
+    <!-- //chart -->
+    <!--animate-->
+    <link href="~/Content/CssAdmin/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="~/Scripts/JqueryAdmin/wow.min.js"></script>
+    <script>
+		 new WOW().init();
+    </script>
+    <!--//end-animate-->
+    <!----webfonts--->
+    <link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!---//webfonts--->
+    <!-- Meters graphs -->
+    <script src="~/Scripts/JqueryAdmin/jquery-1.10.2.min.js"></script>
+    <!-- Placed js at the end of the document so the pages load faster -->
+    <script src="~/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+</head>
+<body class="sticky-header left-side-collapsed" onload="initMap()">
+    <section>
+        <!-- left side start-->
+        <div class="left-side sticky-left-side">
+
+            <!--logo and iconic logo start-->
+            <div class="logo">
+                <h1><a href="@Url.Action("IndexAdmin","Admin")">AN STORE <span>Admin</span></a></h1>
+            </div>
+            <div class="logo-icon text-center">
+                <a href="@Url.Action("IndexAdmin","Admin")"><i class="lnr lnr-home"></i> </a>
+            </div>
+
+            <!--logo and iconic logo end-->
+            <div class="left-side-inner">
+
+                <!--sidebar nav start-->
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                    <li class="active"><a href="@Url.Action("IndexAdmin","Admin")"><i class="lnr lnr-menu"></i><span>Quản lý sản phẩm</span></a></li>
+                    <li class="active"><a href="@Url.Action("Create","Admin")"><i class="lnr lnr-pencil"></i><span>Thêm sản phẩm </span></a></li>
+                    <li class="active"><a href="@Url.Action("Danhmuc","Admin")"><i class="lnr lnr-spell-check"></i> <span>Quản lý danh mục</span></a></li>
+                    <li class="active"><a href="@Url.Action("Khachhang","Admin")"><i class="lnr lnr-book"></i> <span>Quản lý khách hàng</span></a></li>
+                    <li class="active"><a href="@Url.Action("LoginAdmin","Admin")"><i class="lnr lnr-select"></i> <span>Đăng Xuất</span></a></li>
+                    
+                </ul>
+                <!--sidebar nav end-->
+            </div>
+        </div>
+        <!-- left side end-->
+        <!-- main content start-->
+        <div class="main-content">
+            <!-- header-starts -->
+            <div class="header-section">
+
+                <!--toggle button start-->
+                <a class="toggle-btn  menu-collapsed"><i class="fa fa-arrow-circle-right"></i></a>
+                <!--toggle button end-->
+                <!--notification menu start -->
+                <div class="menu-right">
+                    <div class="user-panel-top">
+                        
+                        <div class="profile_details">
+                            <ul>
+                                <li class="dropdown profile_details_drop">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <div class="profile_img">
+                                            <span style="background:url(binhan.jpg) no-repeat center"> </span>
+                                            <div class="user-name">
+                                                <p>Bình An<span>Administrator</span></p>
+                                            </div>
+                                            <i class="lnr lnr-chevron-down"></i>
+                                            <i class="lnr lnr-chevron-up"></i>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu drp-mnu">
+                                        <li> <a href="#"><i class="fa fa-cog"></i>Cài đặt</a> </li>
+                                        <li> <a href="#"><i class="fa fa-user"></i>Profile</a> </li>
+                                        
+                                    </ul>
+                                </li>
+                                <div class="clearfix"> </div>
+                            </ul>
+                        </div>
+                       
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <!--notification menu end -->
+            </div>
+            @RenderBody()
+        </div>
+        
+    </section>
+
+    <script src="~/Scripts/JqueryAdmin/jquery.nicescroll.js"></script>
+    <script src="~/Scripts/JqueryAdmin/scripts.js"></script>
+    <script src="~/Scripts/JqueryAdmin/bootstrap.min.js"></script>
+</body>
+</html>

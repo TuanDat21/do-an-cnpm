@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e55aed7f021945b293fb3f23e9225492" Name="Diagram1">
+        <EntityTypeShape EntityType="webcnpmModel.ADMIN" Width="1.5" PointX="6.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="webcnpmModel.CHITIETDONHANG" Width="1.5" PointX="6.125" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="webcnpmModel.DANHMUC" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="webcnpmModel.DONHANG" Width="1.5" PointX="3.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="webcnpmModel.SANPHAM" Width="1.5" PointX="3.375" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="webcnpmModel.TAIKHOAN" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="webcnpmModel.FK__CHITIETDON__MADH__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="webcnpmModel.FK__CHITIETDON__MASP__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="webcnpmModel.FK__SANPHAM__MADM__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="webcnpmModel.FK__DONHANG__MAKH__36B12243" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

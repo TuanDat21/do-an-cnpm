@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+        <title>New Store A Ecommerce Category Flat Bootstarp Resposive Website Template | Trang Chủ :: w3layouts</title>
+        <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="~/Scripts/jquery.min.js"></script>
+        <!-- Custom Theme files -->
+        <!--theme-style-->
+
+        <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+        <!--//theme-style-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="New Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!--fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'><!--//fonts-->
+        <!-- start menu -->
+        <link href="~/Content/memenu.css" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="~/Scripts/memenu.js"></script>
+        <script>$(document).ready(function(){$(".memenu").memenu();});</script>
+        <script src="~/Scripts/simpleCart.min.js"> </script>    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="search">
+                    <form>
+                        <input type="text" value="Search " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                        <input type="submit" value="Go">
+                    </form>
+                </div>
+                <div class="header-left">
+                    <ul id="user">
+                        <li><a href="@Url.Action("Login", "Home")">Đăng Nhập</a></li>
+                        <li><a href="@Url.Action("Register", "Home")">Đăng Ký</a></li>
+                    </ul>
+                    
+                    <div class="cart box_1">
+                        <a href="@Url.Action("Checkout","CheckOut")">
+                            
+                                <div class="total">
+                                    <span class="simpleCart_total"></span>0 VNĐ (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)
+                                </div>
+                                <img src="~/Content/Images/cart.png" alt="" />
+                            
+                        </a>
+                        <p><a href="javascript:;" class="simpleCart_empty">Làm mới giỏ hàng</a></p>
+
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="head-top">
+                <div class="logo">
+                    <a href="@Url.Action("Index","Home")"><img src="~/Content/Images/logo.png" alt=""></a>
+                </div>
+                <div class=" h_menu4">
+                    <ul class="memenu skyblue">
+                        <li class="active grid"><a class="color8" href="@Url.Action("Index","Home")">Trang Chủ</a></li>
+                        <li class="grid">
+                            <a class="color1" href="#">Thời Trang Nam</a>
+                            <div class="mepanel">
+                                <div class="row">
+                                    <div class="col1">
+                                        <div class="h_nav">
+                                            <ul>
+                                                <li><a href="products.html">Áo thun</a></li>
+                                                <li><a href="products.html">Áo khoác</a></li>
+                                                <li><a href="products.html">Ba-lô</a></li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col1">
+                                        <div class="h_nav">
+                                            <ul>
+                                                <li><a href="products.html">Quần Jean</a></li>
+                                                <li><a href="products.html">Quần Short</a></li>
+                                                <li><a href="products.html">Giày</a></li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col1">
+                                        <div class="h_nav">
+                                            <h4>SẢN PHẨM</h4>
+                                            <h4>BÁN CHẠY </h4>
+                                            <ul>
+                                                
+                                            
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="grid">
+                            <a class="color2" href="#">	Thời Trang Nữ</a>
+                            <div class="mepanel">
+                                <div class="row">
+                                    <div class="col1">
+                                        <div class="h_nav">
+                                            <ul>
+                                                <li><a href="products.html">Áo thun</a></li>
+                                                <li><a href="products.html">Áo khoác</a></li>
+                                                <li><a href="products.html">Ba-lô</a></li>
+          
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col1">
+                                        <div class="h_nav">
+                                            <ul>
+                                                <li><a href="products.html">Quần Jean</a></li>
+                                                <li><a href="products.html">Quần Short</a></li>
+                                                <li><a href="products.html">Giày</a></li>
+             
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col1">
+                                        <div class="h_nav">
+                                            <h4>SẢN PHẨM</h4>
+                                            <h4>BÁN CHẠY </h4>
+                                            <ul>
+                                                
+                                  
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a class="color4" href="@Url.Action("Blog","Home")">Blog</a></li>
+                        <li><a class="color6" href="@Url.Action("Contact","Home")">Liên Hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="footer-top-at">
+
+                        <div class="col-md-4 amet-sed">
+                            <h4>THÔNG TIN</h4>
+                            <ul class="nav-bottom">
+                                <li><a href="#">Giới thiệu về AN Store</a></li>
+                                <li><a href="#">Tuyển dụng</a></li>
+                                <li><a href="contact.html">Địa chỉ</a></li>
+                                <li><a href="#">AN Store's Blog</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-4 amet-sed ">
+                            <h4>LIÊN HỆ QUẢNG CÁO</h4>
+
+                            <p>
+                                TRƯƠNG BÁ BÌNH AN
+                            </p>
+
+                            <p>Điện thoại: 01203400444</p>
+                            <ul class="social">
+                                <li><a href="#"><i> </i></a></li>
+                                <li><a href="#"><i class="twitter"> </i></a></li>
+                                <li><a href="#"><i class="rss"> </i></a></li>
+                                <li><a href="#"><i class="gmail"> </i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-4 amet-sed">
+                            <h4>BẢN TIN</h4>
+                            <p>
+                                Đăng ký để câp nhập đầy đủ tin tức
+                                và quảng cáo.
+                            </p>
+                            <form>
+                                <input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+                                <input type="submit" value="ĐĂNG KÝ">
+                            </form>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="footer-class">
+
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

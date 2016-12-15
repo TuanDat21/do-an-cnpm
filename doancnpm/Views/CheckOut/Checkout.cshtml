@@ -1,0 +1,85 @@
+﻿@using doancnpm.Models
+@model List<CheckOut>
+
+<!DOCTYPE html>
+<html>
+<body>
+    
+
+
+    <div class="container">
+        <div class="check">
+            <h1>Giỏ hàng của tôi </h1>
+            <div class="col-md-9 cart-items">
+
+                <script>
+$(document).ready(function(c) {
+					$('.close1').on('click', function(c){
+						$('.cart-header').fadeOut('slow', function(c){
+							$('.cart-header').remove();
+						});
+						});
+					});
+                </script>
+                @foreach (var item in Model)
+                {
+                <div class="cart-header">
+                    <div class="close1"> </div>
+                    <div class="cart-sec simpleCart_shelfItem">
+                        <div class="cart-item cyc">
+                            <img src="~/Content/Images/hinhsanpham/@item.HINHANH" class="img-responsive" alt="" />
+                        </div>
+                        <div class="cart-item-info">
+                            <h3><a href="@Url.Action("Single", "Home", new { id = item.MASP })">@item.TENSP</a><span>Model No: @item.MASP</span></h3>
+                            <ul class="qty">
+                                <li><p>Giá bán : @item.GIABAN.000 VNĐ</p></li>
+                                <li><p>Số lượng : @item.SOLUONG</p></li>
+                            </ul>
+
+                            <div class="delivery">
+                                <p>Thành tiền: @item.THANHTIEN.000 VNĐ</p>
+                                <span>Giao hàng trong vòng 2 ngày</span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+                }
+            </div>
+            <div class="col-md-3 cart-total">
+                <a class="continue" href="@Url.Action("Products","Home")">Tiếp tục mua hàng</a>
+                <div class="price-details">
+                    <h3>HÓA ĐƠN</h3>
+                    <span>Đơn giá</span>
+                    <span class="total1">@ViewBag.Tongtien.000 VNĐ</span>
+                    <span>Giảm giá</span>
+                    <span class="total1">---</span>
+                    <span>Phí giao hàng</span>
+                    <span class="total1">---</span>
+                    <div class="clearfix"></div>
+                </div>
+                <ul class="total_price">
+                    <li class="last_price"> <h4>Tổng cộng</h4></li>
+                    <li class="last_price"><span>@ViewBag.Tongtien.000 VNĐ</span></li>
+                    <div class="clearfix"> </div>
+                </ul>
+                
+
+                <div class="clearfix"></div>
+                <a class="order" href="@Url.Action("Dathang","Checkout")">ĐẶT HÀNG</a>
+                <div class="total-item">
+                    <h3>TÙY CHỌN</h3>
+                    <h4>Phiếu giảm giá</h4>
+                    <a class="cpns" href="#">Xác nhận</a>
+                    <p><a href="#">Đăng Nhập</a> để có thể sữ dụng phiếu giảm giá</p>
+                </div>
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+</body>
+</html>
